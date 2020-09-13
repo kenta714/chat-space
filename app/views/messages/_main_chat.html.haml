@@ -1,0 +1,36 @@
+.chat
+  .RightHeader
+    .RightHeader__group
+      .RightHeader__groupname
+        ken
+      .RightHeader__memberlist
+        Member ：
+        .RightHeader__member
+          masa
+    .RightHeader__editbutton 
+      Edit
+  .MessageField 
+    .MessageBox
+      .Messageinfo 
+        .Messageinfo__username
+          ken2
+          .Messageinfo__date
+            2020年09月12日 13時08分
+  .Footer
+    .Form
+      .Form__contents
+        .Form__inputcontent 
+          type a message
+        .Form__inputimage
+          %label{class: "Form__inputimage"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "file"}
+      .Form__submit  
+        Send
+
+
+
+        -# = f.label :image, class: "Form__inputimage" do
+        -#     = icon('fas','images')
+        -#     %input{type: "file", class:'file'}
+        -#   = f.file_field :image, class: "Form__inputimage"
