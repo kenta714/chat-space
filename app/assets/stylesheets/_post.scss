@@ -16,25 +16,23 @@
        width: 260px;
        display: flex;
        justify-content: space-between;
-
-.LeftHeader__username {
-  font-size: 16px;
-  font-weight: bold;
-  justify-content: flex-start;
+        &__username {
+        font-size: 16px;
+        font-weight: bold;
+        justify-content: flex-start;
       }
     }
   }
 .LeftHeader__iconList {
-  width: 44px;
-  display: flex;
-  justify-content: end;
-}
-.LeftHeader__icon {
+width: 44px;
+display: flex;
+justify-content: end;
+  &__icon {
   width: 20px;
   margin-left: 5px;
   color: #ffffff;
 }
-
+}
 i {
   width: 25px;
 }
