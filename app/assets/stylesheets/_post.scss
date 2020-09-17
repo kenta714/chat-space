@@ -141,21 +141,20 @@ i {
     position: relative;
     padding: 0 45px 0 10px;
   }
-  &__inputcontent {
+  &__inputContent {
   border: none;
   height: 50px;
   width: 100%;
-  position: absolute;
   top: 13px;
   left: 15px;
   }
-  &__inputimage {
+  &__inputImage {
   position: absolute;
   right: 10px;
   font-size: 1.3rem;
   }
 }
-.file {
+.Hidden {
   display: none;
 }
 

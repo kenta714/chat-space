@@ -2,31 +2,37 @@
   .RightHeader
     .RightHeader__group
       .RightHeader__groupname
-        ken
+        = @group.name
       .RightHeader__memberlist
         Member ：
         .RightHeader__member
-          masa
+          - @group.users.each do |user| 
+            = user.name
     .RightHeader__editbutton 
-      Edit
+      =link_to "Edit", edit_group_path(@group)
+    
   .MessageField 
-    .MessageBox
-      .Messageinfo 
-        .Messageinfo__username
-          ken2
-          .Messageinfo__date
-            2020年09月12日 13時08分
+    = render @messages
+    -# = render partial: 'messages/message', collection: @messages
   .Footer
-    .Form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
-        .Form__inputcontent 
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'
+
+
+
+      -# .Form__inputcontent 
           type a message
-        .Form__inputimage
-          %label{class: "Form__inputimage"}
-            = icon('fas', 'image')
-            %input{type: "file", class: "file"}
-      .Form__submit  
-        Send
+      -# .Form__inputimage
+      -#  %label{class: "Form__inputimage"}
+      -#   = icon('fas', 'image')
+      -# %input{type: "file", class: "file"}
+      -#  .Form__submit  
+            Send
 
 
 
