@@ -41,7 +41,6 @@ $(function(){
     }
   
     $('.Form').on('submit', function(e){
-        console.log("test")
       e.preventDefault();
       let formData = new FormData(this);
       let url = $(this).attr('action');
