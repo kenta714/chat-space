@@ -2,7 +2,7 @@ $(function(){
     function buildHTML(message){
       if ( message.image ) {
         let html =
-          `<div class="MessageBox">
+        `<div class="MessageBox" data-message-id=${message.id}>
             <div class="Messageinfo">
               <div class="Messageinfo__username">
                 ${message.user_name}
@@ -21,12 +21,12 @@ $(function(){
         return html;
       } else {
         let html =
-        `<div class="MessageBox">
+        `<div class="MessageBox" data-message-id=${message.id}>
           <div class="Messageinfo">
             <div class="Messageinfo__username">
               ${message.user_name}
             </div>
-            <div class="MessageInfo__date">
+            <div class="Messageinfo__date">
               ${message.created_at}
             </div>
           </div>
@@ -65,7 +65,7 @@ $(function(){
         })
       .always(function(){
         $('.Form__submit').prop('disabled', false);
-    })
+      })
     });
 });
   
